@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Oh My Param</title>
+<#include "/common/css_js_bootstrap.htm">
+</head>
+<body>
+<#include "/common/navbar.htm">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>POST file</h2>
+      <div class="col-md-6">
+      	<form method="POST" action="/param/post/file" class="well" id="inputForm" enctype="multipart/form-data">
+	        <div class="form-group">
+			    <label>foo</label>
+			    <input type="text" class="form-control" name="foo"/>
+			</div>
+			<div class="form-group">
+			    <label>bar</label>
+			    <input type="text" class="form-control" name="bar"/>
+			</div>
+            <div class="form-group">
+			    <label>single file</label>
+			    <input type="file" name="img"/>
+			</div>
+            <div class="form-group">
+			    <label>multi files</label>
+			    <input type="file" name="files" multiple="multiple"/>
+			</div>
+			<div>
+		    	<button type="submit" class="btn btn-default">Submit</button>
+		    </div>
+		</form>
+      </div>
+    </div>
+ </div>
+</div>
+
+<#include "/common/footer.htm">
+</body>
+</html>

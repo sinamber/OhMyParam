@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!-- 日志文件存放目录，绝度路径 -->
+	<!-- 正式环境   
+	<property name="LOG_DIR" value="/opt/webapp/Amber/logs" />
+	-->
+	<property name="LOG_DIR" value="/tmp/logs" />
+	
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%p] - %msg %n</pattern>
+		</encoder>
+	</appender>
+
+
+	<logger name="com.chifemore.cms" level="DEBUG" />
+	<!-- mybatis debug sql -->
+	<logger name="com.sinamber.app.persistence" level="DEBUG"/>
+	<logger name="org.springframework" level="DEBUG"/>
+
+	<root level="INFO">
+		<appender-ref ref="console" />
+	</root>
+</configuration>

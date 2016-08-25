@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Oh My Param</title>
+<#include "/common/css_js_bootstrap.htm">
+</head>
+<body>
+<#include "/common/navbar.htm">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>POST simple data</h2>
+      <div class="col-md-6">
+      	<form method="POST" action="/param/post/simple" class="well">
+		  <div class="form-group">
+		    <label>foo</label>
+		    <input type="text" class="form-control" name="foo"/>
+		  </div>
+		  <div class="form-group">
+		    <label>bar</label>
+		    <input type="text" class="form-control" name="bar"/>
+		  </div>
+		  <button type="submit" class="btn btn-default">Submit</button>
+		</form>
+      </div>
+    </div>
+ </div>
+</div>
+
+<#include "/common/footer.htm">
+</body>
+</html>

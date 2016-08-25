@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Oh My Param</title>
+<#include "/common/css_js_bootstrap.htm">
+</head>
+<body>
+<#include "/common/navbar.htm">
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>Hello Parameter</h1>
+    <p>This is a param demo</p>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <h2>URL</h2>
+      <div>
+      	<ul>
+      		<li><h5><a href="/param/url/simple?foo=FOO" target="_blank">简单参数 /param/url/simple?foo=FOO</a></h5></li>
+      		<li><h5><a href="/param/url/simple?foo=FOO&bar=BAZ" target="_blank">多个参数 /param/url/simple?foo=FOO&bar=BAZ</a></h5></li>
+      		<li><h5><a href="/param/url/path_param/666" target="_blank">path参数 /param/url/path_param/666</a></h5></li>
+      		<li><h5><a href="/param/url/path_param/null" target="_blank">path参数(400) /param/url/path_param/null</a></h5></li>
+      		<li><h5><a href="/param/url/array_param?id=1&id=2&id=3" target="_blank">URL数组 /param/url/array_param?id=1&id=2&id=3</a></h5></li>
+      		<li><h5><a href="/param/url/array_param1?id=1,2,3" target="_blank">URL数组 /param/url/array_param1?id=1,2,3</a></h5></li>
+      		<li><h5><a href="/param/url/date/2016-08-22 17:35:23" target="_blank">日期参数 /param/url/date/2016-08-22 17:35:23</a></h5></li>
+      	</ul>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h2>POST</h2>
+      <div>
+      	<ul>
+      		<li><h5><a href="/param/post/simple" target="_blank">简单参数 /param/post/simple</a></h5></li>
+      		<li><h5><a href="/param/post/vo" target="_blank">VO参数 /param/post/vo</a></h5></li>
+      		<li><h5><a href="/param/post/array" target="_blank">array参数 /param/post/array</a></h5></li>
+      		<li><h5><a href="/param/post/file" target="_blank">file参数 /param/post/file</a></h5></li>
+      	</ul>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h2>RAW DATA</h2>
+      <p>coming soon...</p>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    </div>
+ </div>
+</div>
+
+<#include "/common/footer.htm">
+</body>
+</html>
