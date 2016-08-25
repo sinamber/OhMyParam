@@ -1,6 +1,5 @@
 package com.mljr.demo.controller;
 
-import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.List;
@@ -8,6 +7,7 @@ import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import com.mljr.demo.bean.Cat;
 import com.mljr.demo.bean.User;
 
 @RestController
@@ -76,7 +77,7 @@ public class PostParamController extends BaseController {
 		imgMap.put("contentType", imgMultipartFile.getContentType());
 		imgMap.put("originalFilename", imgMultipartFile.getOriginalFilename());
 		imgMap.put("size", imgMultipartFile.getSize());
-		
+
 		/*
 		//save file
 		File saveImgeFile = new File("/tmp/path/to/save/file");
@@ -100,4 +101,14 @@ public class PostParamController extends BaseController {
 		return data;
 	}
 
+	@RequestMapping(path = "/raw", method = RequestMethod.GET)
+	public ModelAndView raw() {
+		return view("/post_raw");
+	}
+
+	@RequestMapping(path = "/raw", method = RequestMethod.POST)
+	public Object raw(@RequestBody Cat cat) {
+		logger.info("cat = {}", cat);
+		return cat;
+	}
 }

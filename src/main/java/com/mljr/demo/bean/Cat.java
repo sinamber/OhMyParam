@@ -1,20 +1,9 @@
 package com.mljr.demo.bean;
 
 public class Cat extends BaseEntity {
-
-	private Integer id;
 	private String name;
-	private int sex;
-	private int age;
-	private String color;
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
+	private Integer age;
+	private Master master;
 
 	public String getName() {
 		return name;
@@ -24,28 +13,20 @@ public class Cat extends BaseEntity {
 		this.name = name;
 	}
 
-	public int getSex() {
-		return sex;
-	}
-
-	public void setSex(int sex) {
-		this.sex = sex;
-	}
-
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 
-	public String getColor() {
-		return color;
+	public Master getMaster() {
+		return master;
 	}
 
-	public void setColor(String color) {
-		this.color = color;
+	public void setMaster(Master master) {
+		this.master = master;
 	}
 
 }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Oh My Param</title>
+<#include "/common/css_js_bootstrap.htm">
+
+<script type="text/javascript">
+function postRawData(){
+	var cat = {
+		name:'tom',
+		age:10,
+		master:{
+			name:'jack',
+			gender:1
+		}
+	}
+	
+	$.ajax({
+		url:'/param/post/raw',
+	    type: 'POST',
+	    data: JSON.stringify(cat),
+	    processData: false,
+	    contentType: 'application/json',
+	    success:function(resp){
+	    	$('#results').append(resp);
+	    },
+	    error:function(){
+	    	$('#results').append('fail to send request');
+	    }
+	});
+	
+}
+</script>
+
+
+
+</head>
+<body>
+<#include "/common/navbar.htm">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>POST array</h2>
+      <div class="col-md-6">
+      	<div id="results"></div>
+      	
+      	<button type="button"  onclick="postRawData()" class="btn btn-default">post raw data</button>
+      </div>
+    </div>
+ </div>
+</div>
+
+<#include "/common/footer.htm">
+</body>
+</html>
